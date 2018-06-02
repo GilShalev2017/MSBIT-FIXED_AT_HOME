@@ -1,0 +1,43 @@
+.box-image {
+    width: 370px;
+    height: 370px;
+}
+
+.box{
+    display: inline-block;
+    position: relative;
+}
+
+h1, h3, h5, h6 {
+    text-align: center;
+    font-weight: bold;
+}
+
+.details-box {
+    position: absolute;
+    top: 0;
+    height: 100%;
+    visibility: hidden;
+}
+
+.box:hover .details-box{
+    visibility: visible;
+    color: white;
+    background-color: rgba(0,0,0,0.85);
+}
+
+.details {
+    position: relative;
+    top: 40%;
+}
+
+.line-clamp {
+    height: 3.6em; /* exactly three lines */
+    overflow: hidden;
+}
+
+.truncate {
+    height: 3.0em;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}

@@ -1,0 +1,157 @@
+<!--<header>-->
+
+<!--</header>-->
+
+<!--<header>-->
+
+<!--</header>-->
+
+<!--<content>-->
+
+<!--</content>-->
+
+<!--<footer>-->
+
+<!--</footer>-->
+
+<div class="container-fluid">
+    <div class="row row-top-navigation">
+        <div class="container">
+            <div class="row">
+                <div class="col-side-navigation-offset col-content">
+                    <ul class="list-nav">
+
+                        <li class="logo">
+                            <img src="../assets/images/favicon.png"
+                                 class="logo"
+                                 width="30px"/>
+                        </li>
+
+                        <li>
+                            <a routerLink="/dashboard" routerLinkActive="active">
+                                ABOUT
+                            </a>
+                        </li>
+                        <li>
+                            <a routerLink="/companies" routerLinkActive="active">
+                                CONTACT
+                            </a>
+                        </li>
+                        <li>
+                            <a routerLink="/members" routerLinkActive="active">
+                                PORTFOLIO
+                            </a>
+                        </li>
+                        <li>
+                            <a routerLink="/settings" routerLinkActive="active">
+                                BLOG
+                            </a>
+                        </li>
+
+                        <li>
+                            <a routerLink="/settings" routerLinkActive="active">
+                                WORDPRESS THEME
+                            </a>
+                        </li>
+
+
+                    </ul>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-side-navigation-offset col-content">
+                    <ul class="list-nav">
+                        <li [class.selected]="isSelected('')">
+                            <a (click)="showAll()" routerLinkActive="active">
+                                All
+                            </a>
+                        </li>
+                        <li [class.selected]="isSelected('branding')">
+                            <a (click)="filter('branding')">
+                                Branding
+                            </a>
+                        </li>
+                        <li [class.selected]="isSelected('print')">
+                            <a (click)="filter('print')">
+                                Print
+                            </a>
+                        </li>
+                        <li [class.selected]="isSelected('Photography')">
+                            <a (click)="filter('Photography')">
+                                Photography
+                            </a>
+                        </li>
+
+                        <li [class.selected]="isSelected('Design')">
+                            <a (click)="filter('Design')">
+                                Design
+                            </a>
+                        </li>
+
+                        <li [class.selected]="isSelected('Mockup')">
+                            <a (click)="filter('Mockup')">
+                                Mockup
+                            </a>
+                        </li>
+
+                    </ul>
+                </div>
+            </div>
+
+            <!--<div class="row">-->
+            <!--<ul>-->
+            <!--<li *ngFor="let box of boxes">-->
+            <!--{{box.title}}-->
+            <!--</li>-->
+            <!--</ul>-->
+            <!--</div>-->
+
+            <div class="row">
+
+                <box [uiBox]="uiBox"
+                     *ngFor="let uiBox of filteredUiBoxes">
+                </box>
+
+            </div>
+
+            <div class="row">
+                <div style="text-align: center">
+                    <a (click)="loadMore()">LOAD MORE WORKS</a>
+                </div>
+            </div>
+
+            <div class="row">
+                <div style="text-align: center">
+                    <!--<a>FONTAwesome icons</a>-->
+                    <div class="btn-group">
+                        <a class="btn btn-default" href="#">
+                             <span class="fa-stack fa-lg">
+                                  <i class="fa fa-square-o fa-stack-2x"></i>
+                                  <i class="fa fa-twitter fa-stack-1x"></i>
+                            </span>
+                        </a>
+                        <a class="btn btn-default" href="#">
+                           <span class="fa-stack fa-lg">
+                              <i class="fa fa-square-o fa-stack-2x"></i>
+                              <i class="fa fa-facebook fa-stack-1x"></i>
+                           </span>
+                        </a>
+                        <a class="btn btn-default" href="#">
+                             <span class="fa-stack fa-lg">
+                              <i class="fa fa-square-o fa-stack-2x"></i>
+                              <i class="fa fa-credit-card fa-stack-1x"></i>
+                           </span>
+                        </a>
+                        <a class="btn btn-default" href="#">
+                          <span class="fa-stack fa-lg">
+                              <i class="fa fa-square-o fa-stack-2x"></i>
+                              <i class="fa fa-github fa-stack-1x"></i>
+                           </span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
